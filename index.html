@@ -1,96 +1,272 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Khairul Tamami</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biodata Mahasiswa</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        }
+body{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:#333;
+    line-height:1.6;
+}
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:muncul 1s ease;
+}
 
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+.header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
 
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
+.header img{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+}
 
-        .judul {
-            font-weight: bold;
-            width: 30%;
-        }
+.header h1{
+    margin-top:15px;
+}
 
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: gray;
-        }
-    </style>
+.section{
+    padding:25px;
+    border-bottom:1px solid #ddd;
+}
+
+.section h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+}
+
+table td{
+    padding:8px;
+}
+
+ul{
+    margin-left:20px;
+}
+
+.skill{
+    background:#e9ecef;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.skill-bar{
+    background:#0d6efd;
+    color:white;
+    padding:8px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.github{
+    display:inline-block;
+    background:#24292e;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.github:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+button{
+    background:#333;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark .container{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark .section{
+    border-color:#444;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Biodata Mahasiswa</h1>
+<div class="container">
+
+    <div class="header">
+        <img src="foto.jpg" alt="Foto Profil">
+        <h1>Khairul Tamami</h1>
+        <p>Mahasiswa Teknik Informatika</p>
+
+        <button onclick="darkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <div class="section">
+        <h2>Biodata</h2>
 
         <table>
             <tr>
-                <td class="judul">Nama</td>
-                <td>Khairul Tamami</td>
-            </tr>
-            <tr>
-                <td class="judul">NIM</td>
+                <td><b>NIM</b></td>
                 <td>2210010130</td>
             </tr>
             <tr>
-                <td class="judul">Program Studi</td>
+                <td><b>Program Studi</b></td>
                 <td>Teknik Informatika</td>
             </tr>
             <tr>
-                <td class="judul">Universitas</td>
+                <td><b>Universitas</b></td>
                 <td>Universitas Muhammadiyah Banjarmasin</td>
             </tr>
             <tr>
-                <td class="judul">Email</td>
+                <td><b>Email</b></td>
                 <td>khairultamami@email.com</td>
             </tr>
             <tr>
-                <td class="judul">Hobi</td>
-                <td>Programming, AI, dan Gaming</td>
-            </tr>
-            <tr>
-                <td class="judul">Alamat</td>
+                <td><b>Alamat</b></td>
                 <td>Banjarmasin, Kalimantan Selatan</td>
             </tr>
         </table>
+    </div>
 
-        <div class="footer">
-            © 2026 - Website Biodata Pribadi
+    <div class="section">
+        <h2>Tentang Saya</h2>
+
+        <p>
+            Saya merupakan mahasiswa Teknik Informatika yang
+            memiliki minat pada bidang pemrograman, pengembangan
+            web, database, dan Artificial Intelligence.
+            Saya senang mempelajari teknologi baru serta membuat
+            berbagai proyek berbasis komputer.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Skill</h2>
+
+        <p>HTML & CSS</p>
+        <div class="skill">
+            <div class="skill-bar" style="width:90%">90%</div>
+        </div>
+
+        <p>Java</p>
+        <div class="skill">
+            <div class="skill-bar" style="width:80%">80%</div>
+        </div>
+
+        <p>Python</p>
+        <div class="skill">
+            <div class="skill-bar" style="width:75%">75%</div>
+        </div>
+
+        <p>MySQL</p>
+        <div class="skill">
+            <div class="skill-bar" style="width:85%">85%</div>
         </div>
     </div>
+
+    <div class="section">
+        <h2>Pendidikan</h2>
+
+        <ul>
+            <li>SMK Negeri 5 Banjarmasin</li>
+            <li>S1 Teknik Informatika - Universitas Muhammadiyah Banjarmasin</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Pengalaman PKL</h2>
+
+        <p>
+            Praktik Kerja Lapangan di Dinas Perpustakaan dan Arsip
+            Daerah Kabupaten Barito Kuala dengan fokus pada
+            perancangan dan pengelolaan database sistem informasi.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Proyek</h2>
+
+        <ul>
+            <li>Sistem Informasi Inventaris</li>
+            <li>Chatbot Akademik Python</li>
+            <li>Sistem Penjualan Berbasis Web</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>GitHub</h2>
+
+        <a class="github" href="https://github.com/username-kamu" target="_blank">
+            Kunjungi GitHub Saya
+        </a>
+    </div>
+
+    <footer>
+        © 2026 Khairul Tamami | Teknik Informatika
+    </footer>
+
+</div>
+
+<script>
+function darkMode(){
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
